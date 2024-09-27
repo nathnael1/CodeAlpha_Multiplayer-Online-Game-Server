@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+
+</head>
+<body>
+    <div class = "disabled" id="load">
+        <p>Game Starting...</p>
+        <img src="{% static 'load.gif' %}" alt="">
+    </div>
+    <div class="line d-none d-md-block">
+
+    </div>
+    <div class="container-fluid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="142" viewBox="0 0 1280 142" fill="none">
+            <path d="M1873 -375.5C1873 -282.992 1569.01 -5.99991 1476.5 -5.99991C1383.99 -5.99991 -63 211.008 -63 118.5C-63 25.9928 11.9923 -48.9996 104.5 -48.9996C197.008 -48.9996 1873 -468.008 1873 -375.5Z" fill="url(#paint0_linear_2_24)"/>
+            <defs>
+            <linearGradient id="paint0_linear_2_24" x1="-63" y1="-123.693" x2="1873" y2="-123.693" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0283654" stop-color="#000F01"/>
+            <stop offset="0.418379" stop-color="#047009"/>
+            <stop offset="0.656426" stop-color="#054D08"/>
+            </linearGradient>
+            </defs>
+            </svg>
+        <div class="row">
+            <div class="col-12 col-md-6 left">
+                <div class="img">
+                    <img src="{% static 'hero.png' %}" alt="">
+                </div>
+                <div class="description">
+                    <p>Welcome to Tic-Tac-Toe Online – a real-time multiplayer experience where you can challenge your friends or random opponents. Enter a room code to join or create your own game and get ready for strategic fun!</p>
+                </div>
+                <div class="button">
+                    <a href="https://www.github.com/nathnael1" target="_blank">See More</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 right">
+                <h1 class = "py-2">TicTacToe</h1>
+                <div class="img2">
+                    <img src="{% static 'tictactoe.png'%}" alt="">
+                </div>
+                <form>
+                    <input type="text" id = "code" placeholder="Enter Room code">
+                    <input id = "submit" type="submit" value = "Start Game">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src = "{% static 'game.js' %}"></script>
+</body>
+</html>
